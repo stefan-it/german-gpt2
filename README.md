@@ -54,6 +54,8 @@ Der Sinn des Lebens ist es, im Geist zu verweilen, aber nicht in der Welt zu sei
 Die Menschen beginnen, sich nicht nach der Natur und nach der Welt zu richten, sondern nach der Seele,'
 ```
 
+It is also possible to generate text using the (web-based) inference widget from the [model hub page](https://huggingface.co/dbmdz/german-gpt2).
+
 # Fine-Tuning on other texts
 
 Thanks to the awesome Transformers library, it is also possible to "fine-tune" the model on your own texts. Fine-Tuning can be done with the [language-modeling](https://github.com/huggingface/transformers/tree/master/examples/language-modeling) example from Transformers library
