@@ -4,7 +4,7 @@ In this repository we release (yet another) GPT-2 model, that was trained on var
 
 The model is meant to be an entry point for fine-tuning on other texts, and it is definitely not as good or "dangerous" as the English GPT-3 model. We do not plan extensive PR or staged releases for this model 😉
 
-**Note**: The model was initially released under an anonymous alias (`anonymous-german-nlp/german-gpt2`) so we now "de-anonymize" it.
+**Note**: The model was initially [released](https://huggingface.co/anonymous-german-nlp/german-gpt2) under an anonymous alias (`anonymous-german-nlp/german-gpt2`) so we now "de-anonymize" it.
 
 More details about GPT-2 can be found in the great [Hugging Face](https://huggingface.co/transformers/model_doc/gpt2.html) documentation.
 
