@@ -102,7 +102,7 @@ All models are available on the [Huggingface model hub](https://huggingface.co/d
 # Contact (Bugs, Feedback, Contribution and more)
 
 For questions about our BERT models just open an issue
-[here](https://github.com/dbmdz/berts/issues/new) 🤗
+[here](https://github.com/stefan-it/german-gpt/issues/new) 🤗
 
 # Acknowledgments
 
