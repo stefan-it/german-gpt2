@@ -89,6 +89,8 @@ Faust (schaudernd).
 Den schönen Boten finde' ich verwirrend;
 ```
 
+It is also possible to generate text using the (web-based) inference widget from the [model hub page](https://huggingface.co/dbmdz/german-gpt2-faust).
+
 ## Fine-tuning on German recipes
 
 [Philipp Schmid](https://github.com/philschmid) fine-tuned our model on German recipes - please enjoy the delicious [medium post](https://towardsdatascience.com/fine-tune-a-non-english-gpt-2-model-with-huggingface-9acc2dc7635b) for more details!
