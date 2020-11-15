@@ -60,7 +60,7 @@ It is also possible to generate text using the (web-based) inference widget from
 
 Thanks to the awesome Transformers library, it is also possible to "fine-tune" the model on your own texts. Fine-Tuning can be done with the [language-modeling](https://github.com/huggingface/transformers/tree/master/examples/language-modeling) example from Transformers library
 
-## German GPT-2 fine-tuned on Faust Faust I and II
+## German GPT-2 fine-tuned on Faust I and II
 
 We fine-tuned our German GPT-2 model on "Faust I and II" from Johann Wolfgang Goethe. These texts can be obtained from [Deutsches Textarchiv (DTA)](http://www.deutschestextarchiv.de/book/show/goethe_faust01_1808). We use the "normalized" version of both texts (to avoid out-of-vocabulary problems with e.g. "ſ")
 
