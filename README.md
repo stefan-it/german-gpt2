@@ -48,7 +48,8 @@ print(text)
 This could output this beautiful text:
 
 ```
-'Der Sinn des Lebens ist es, im Geist zu verweilen, aber nicht in der Welt zu sein, sondern ganz im Geist zu leben.\nDie Menschen beginnen, sich nicht nach der Natur und nach der Welt zu richten, sondern nach der Seele,'
+Der Sinn des Lebens ist es, im Geist zu verweilen, aber nicht in der Welt zu sein, sondern ganz im Geist zu leben.
+Die Menschen beginnen, sich nicht nach der Natur und nach der Welt zu richten, sondern nach der Seele,'
 ```
 
 # Fine-Tuning on other texts
@@ -77,7 +78,11 @@ print(text)
 and could output:
 
 ```
-Schon um die Liebe bitte ich, Herr! Wer mag sich die dreifach Ermächtigen? Sei mir ein Held! Und daß die Stunde kommt spreche ich nicht aus. Faust (schaudernd). Den schönen Boten finde' ich verwirrend;
+Schon um die Liebe bitte ich, Herr! Wer mag sich die dreifach Ermächtigen?
+Sei mir ein Held!
+Und daß die Stunde kommt spreche ich nicht aus.
+Faust (schaudernd).
+Den schönen Boten finde' ich verwirrend;
 ```
 
 # License
