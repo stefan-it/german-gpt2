@@ -6,6 +6,8 @@ The model is meant to be an entry point for fine-tuning on other texts, and it i
 
 We do not plan extensive PR or staged releases for this model 😉
 
+**Note**: The model was initially released under an anonymous alias (`anonymous-german-nlp/german-gpt2`) so we now "de-anonymize" it ;)
+
 # Changelog
 
 15.11.2020: Initial release.
