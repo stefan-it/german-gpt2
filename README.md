@@ -107,7 +107,7 @@ All models are available on the [Huggingface model hub](https://huggingface.co/d
 
 # Contact (Bugs, Feedback, Contribution and more)
 
-For questions about our BERT models just open an issue
+For questions about our GPT-2 models just open an issue
 [here](https://github.com/stefan-it/german-gpt/issues/new) 🤗
 
 # Acknowledgments
