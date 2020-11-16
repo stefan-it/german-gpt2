@@ -1,5 +1,7 @@
 # German GPT-2 model
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4275046.svg)](https://doi.org/10.5281/zenodo.4275046)
+
 In this repository we release (yet another) GPT-2 model, that was trained on various texts for German.
 
 The model is meant to be an entry point for fine-tuning on other texts, and it is definitely not as good or "dangerous" as the English GPT-3 model. We do not plan extensive PR or staged releases for this model 😉
@@ -109,6 +111,23 @@ All models are available on the [Huggingface model hub](https://huggingface.co/d
 
 For questions about our GPT-2 models just open an issue
 [here](https://github.com/stefan-it/german-gpt/issues/new) 🤗
+
+# Citation
+
+You can use the following BibTeX entry for citation:
+
+```bibtex
+@software{stefan_schweter_2020_4275046,
+  author       = {Stefan Schweter},
+  title        = {German GPT-2 model},
+  month        = nov,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {1.0.0},
+  doi          = {10.5281/zenodo.4275046},
+  url          = {https://doi.org/10.5281/zenodo.4275046}
+}
+```
 
 # Acknowledgments
 
