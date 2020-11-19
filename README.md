@@ -44,7 +44,7 @@ from transformers import pipeline
 pipe = pipeline('text-generation', model="dbmdz/german-gpt2",
                  tokenizer="dbmdz/german-gpt2", config={'max_length':800})   
 
-text = pipe2("Der Sinn des Lebens ist es")[0]["generated_text"]
+text = pipe("Der Sinn des Lebens ist es")[0]["generated_text"]
 
 print(text)
 ```
@@ -78,7 +78,7 @@ from transformers import pipeline
 pipe = pipeline('text-generation', model="dbmdz/german-gpt2-faust",
                  tokenizer="dbmdz/german-gpt2-faust", config={'max_length':800})   
 
-text = pipe2("Schon um die Liebe")[0]["generated_text"]
+text = pipe("Schon um die Liebe")[0]["generated_text"]
 
 print(text)
 ```
