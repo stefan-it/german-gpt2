@@ -42,9 +42,9 @@ However, text generation is a bit more interesting, so here's an example that sh
 from transformers import pipeline
 
 pipe = pipeline('text-generation', model="dbmdz/german-gpt2",
-                 tokenizer="dbmdz/german-gpt2", config={'max_length':800})   
+                 tokenizer="dbmdz/german-gpt2")
 
-text = pipe("Der Sinn des Lebens ist es")[0]["generated_text"]
+text = pipe("Der Sinn des Lebens ist es", max_length=100)[0]["generated_text"]
 
 print(text)
 ```
@@ -76,9 +76,9 @@ We also open source this fine-tuned model. Text can be generated with:
 from transformers import pipeline
 
 pipe = pipeline('text-generation', model="dbmdz/german-gpt2-faust",
-                 tokenizer="dbmdz/german-gpt2-faust", config={'max_length':800})   
+                 tokenizer="dbmdz/german-gpt2-faust")
 
-text = pipe("Schon um die Liebe")[0]["generated_text"]
+text = pipe("Schon um die Liebe", max_length=100)[0]["generated_text"]
 
 print(text)
 ```
