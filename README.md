@@ -99,6 +99,9 @@ It is also possible to generate text using the (web-based) inference widget from
 
 [Philipp Schmid](https://github.com/philschmid) fine-tuned our model on German recipes - please enjoy the delicious [medium post](https://towardsdatascience.com/fine-tune-a-non-english-gpt-2-model-with-huggingface-9acc2dc7635b) for more details!
 
+## Fine-tuning on German medical reviews
+A detailed [blog post](https://data-dive.com/finetune-german-gpt2-on-tpu-transformers-tensorflow-for-text-generation-of-reviews) fine-tunes the Tensorflow version of our model on a large data set of German medical reviews. After training, the model can be prompted to generate positive or negative reviews.
+
 # License
 
 All models are licensed under [MIT](LICENSE).
