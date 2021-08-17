@@ -87,7 +87,9 @@ It is also possible to generate text using the (web-based) inference widget from
 
 # Fine-Tuning on other texts
 
-Thanks to the awesome Transformers library, it is also possible to "fine-tune" the model on your own texts. Fine-Tuning can be done with the [language-modeling](https://github.com/huggingface/transformers/tree/master/examples/language-modeling) example from Transformers library.
+Thanks to the awesome Transformers library, it is also possible to "fine-tune" the model on your own texts.
+Fine-Tuning can be done with the [language-modeling](https://github.com/huggingface/transformers/tree/master/examples/pytorch/language-modeling)
+example from Transformers library.
 
 Feel free to open a PR to include your fine-tuned model here!
 
