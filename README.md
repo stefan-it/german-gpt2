@@ -12,7 +12,9 @@ More details about GPT-2 can be found in the great [Hugging Face](https://huggin
 
 # Changelog
 
-15.11.2020: Initial release.
+17.08.2021: Public release of re-trained version of our German GPT-2 model with better results.
+
+15.11.2020: Initial release. Please use the tag v1.0 for [this older version](https://huggingface.co/dbmdz/german-gpt2/tree/v1.0).
 
 # Training corpora
 
@@ -20,9 +22,34 @@ We use pretty much the same corpora as used for training the DBMDZ BERT model, t
 
 Thanks to the awesome Hugging Face team, it is possible to create byte-level BPE with their awesome [Tokenizers](https://github.com/huggingface/tokenizers) library.
 
-With the previously mentioned awesome Tokenizers library we created a 52K byte-level BPE vocab based on the training corpora.
+With the previously mentioned awesome Tokenizers library we created a 50K byte-level BPE vocab based on the training corpora.
 
-After creating the vocab, we could train the GPT-2 for German on one TPU over the complete training corpus (three epochs).
+After creating the vocab, we could train the GPT-2 for German on a v3-8 TPU over the complete training corpus (20 epochs).
+
+# Training details
+
+We use the JAX/FLAX integration from Transformers to re-train a better version of our GPT-2 model. The following hyperparameters were used:
+
+```bash
+./run_clm_flax.py \
+    --output_dir="./l" \
+    --model_type="gpt2" \
+    --config_name="./" \
+    --tokenizer_name="./" \
+    --do_train --do_eval \
+    --block_size="512" \
+    --per_device_train_batch_size="64" \
+    --per_device_eval_batch_size="64" \
+    --learning_rate="5e-3" --warmup_steps="1000" \
+    --adam_beta1="0.9" --adam_beta2="0.98" --weight_decay="0.01" \
+    --overwrite_output_dir \
+    --num_train_epochs="20" \
+    --logging_steps="500" \
+    --save_steps="2500" \
+    --eval_steps="2500" \
+```
+
+More details can be found in the [Transformers documentation](https://github.com/huggingface/transformers/blob/master/examples/flax/language-modeling/README.md#train-model-1).
 
 # Using the model
 
@@ -66,7 +93,7 @@ Feel free to open a PR to include your fine-tuned model here!
 
 ## German GPT-2 fine-tuned on Faust I and II
 
-We fine-tuned our German GPT-2 model on "Faust I and II" from Johann Wolfgang Goethe. These texts can be obtained from [Deutsches Textarchiv (DTA)](http://www.deutschestextarchiv.de/book/show/goethe_faust01_1808). We use the "normalized" version of both texts (to avoid out-of-vocabulary problems with e.g. "ſ")
+We fine-tuned our German GPT-2 model (v1.0 version) on "Faust I and II" from Johann Wolfgang Goethe. These texts can be obtained from [Deutsches Textarchiv (DTA)](http://www.deutschestextarchiv.de/book/show/goethe_faust01_1808). We use the "normalized" version of both texts (to avoid out-of-vocabulary problems with e.g. "ſ")
 
 Fine-Tuning was done for 100 epochs, using a batch size of 4 with half precision on a RTX 3090. Total time was around 12 minutes (it is really fast!).
 
@@ -97,10 +124,12 @@ It is also possible to generate text using the (web-based) inference widget from
 
 ## Fine-tuning on German recipes
 
-[Philipp Schmid](https://github.com/philschmid) fine-tuned our model on German recipes - please enjoy the delicious [medium post](https://towardsdatascience.com/fine-tune-a-non-english-gpt-2-model-with-huggingface-9acc2dc7635b) for more details!
+[Philipp Schmid](https://github.com/philschmid) fine-tuned our model (v1.0 version) on German recipes - please enjoy the delicious
+[medium post](https://towardsdatascience.com/fine-tune-a-non-english-gpt-2-model-with-huggingface-9acc2dc7635b) for more details!
 
 ## Fine-tuning on German medical reviews
-A detailed [blog post](https://data-dive.com/finetune-german-gpt2-on-tpu-transformers-tensorflow-for-text-generation-of-reviews) fine-tunes the Tensorflow version of our model on a large data set of German medical reviews. After training, the model can be prompted to generate positive or negative reviews.
+A detailed [blog post](https://data-dive.com/finetune-german-gpt2-on-tpu-transformers-tensorflow-for-text-generation-of-reviews) fine-tunes the Tensorflow
+version of our model on a large data set of German medical reviews. After training, the model can be prompted to generate positive or negative reviews.
 
 # License
 
